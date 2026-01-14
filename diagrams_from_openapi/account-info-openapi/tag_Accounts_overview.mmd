@@ -1,0 +1,10 @@
+flowchart TB
+  %% Tag overview: Accounts
+  subgraph Accounts["Accounts"]
+    _accounts["/accounts"]
+    _accounts_get_GetAccounts["GET\nGetAccounts"]
+    _accounts --> _accounts_get_GetAccounts
+    _accounts__AccountId_["/accounts/{AccountId}"]
+    _accounts__AccountId__get_GetAccountsAccountId["GET\nGetAccountsAccountId"]
+    _accounts__AccountId_ --> _accounts__AccountId__get_GetAccountsAccountId
+  end

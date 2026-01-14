@@ -1,0 +1,16 @@
+flowchart TB
+  %% Tag overview: Domestic Scheduled Payments
+  subgraph Domestic_Scheduled_Payments["Domestic Scheduled Payments"]
+    _domestic_scheduled_payment_consents["/domestic-scheduled-payment-consents"]
+    _domestic_scheduled_payment_consents_post_CreateDomesticScheduledPaymentConsents["POST\nCreateDomesticScheduledPaymentConsents"]
+    _domestic_scheduled_payment_consents --> _domestic_scheduled_payment_consents_post_CreateDomesticScheduledPaymentConsents
+    _domestic_scheduled_payment_consents__ConsentId_["/domestic-scheduled-payment-consents/{ConsentId}"]
+    _domestic_scheduled_payment_consents__ConsentId__get_GetDomesticScheduledPaymentConsentsConsentId["GET\nGetDomesticScheduledPaymentConsentsConsentId"]
+    _domestic_scheduled_payment_consents__ConsentId_ --> _domestic_scheduled_payment_consents__ConsentId__get_GetDomesticScheduledPaymentConsentsConsentId
+    _domestic_scheduled_payments["/domestic-scheduled-payments"]
+    _domestic_scheduled_payments_post_CreateDomesticScheduledPayments["POST\nCreateDomesticScheduledPayments"]
+    _domestic_scheduled_payments --> _domestic_scheduled_payments_post_CreateDomesticScheduledPayments
+    _domestic_scheduled_payments__DomesticScheduledPaymentId_["/domestic-scheduled-payments/{DomesticScheduledPaymentId}"]
+    _domestic_scheduled_payments__DomesticScheduledPaymentId__get_GetDomesticScheduledPaymentsDomesticScheduledPaymentId["GET\nGetDomesticScheduledPaymentsDomesticScheduledPaymentId"]
+    _domestic_scheduled_payments__DomesticScheduledPaymentId_ --> _domestic_scheduled_payments__DomesticScheduledPaymentId__get_GetDomesticScheduledPaymentsDomesticScheduledPaymentId
+  end

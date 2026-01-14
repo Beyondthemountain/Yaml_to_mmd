@@ -1,0 +1,12 @@
+flowchart TB
+  %% Tag overview: Account Access
+  subgraph Account_Access["Account Access"]
+    _account_access_consents["/account-access-consents"]
+    _account_access_consents_post_CreateAccountAccessConsents["POST\nCreateAccountAccessConsents"]
+    _account_access_consents --> _account_access_consents_post_CreateAccountAccessConsents
+    _account_access_consents__ConsentId_["/account-access-consents/{ConsentId}"]
+    _account_access_consents__ConsentId__delete_DeleteAccountAccessConsentsConsentId["DELETE\nDeleteAccountAccessConsentsConsentId"]
+    _account_access_consents__ConsentId_ --> _account_access_consents__ConsentId__delete_DeleteAccountAccessConsentsConsentId
+    _account_access_consents__ConsentId__get_GetAccountAccessConsentsConsentId["GET\nGetAccountAccessConsentsConsentId"]
+    _account_access_consents__ConsentId_ --> _account_access_consents__ConsentId__get_GetAccountAccessConsentsConsentId
+  end

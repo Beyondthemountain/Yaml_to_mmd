@@ -1,0 +1,14 @@
+flowchart TB
+  %% Tag overview: Event Subscriptions
+  subgraph Event_Subscriptions["Event Subscriptions"]
+    _event_subscriptions["/event-subscriptions"]
+    _event_subscriptions_get_GetEventSubscriptions["GET\nGetEventSubscriptions"]
+    _event_subscriptions --> _event_subscriptions_get_GetEventSubscriptions
+    _event_subscriptions_post_CreateEventSubscriptions["POST\nCreateEventSubscriptions"]
+    _event_subscriptions --> _event_subscriptions_post_CreateEventSubscriptions
+    _event_subscriptions__EventSubscriptionId_["/event-subscriptions/{EventSubscriptionId}"]
+    _event_subscriptions__EventSubscriptionId__delete_DeleteEventSubscriptionsEventSubscriptionId["DELETE\nDeleteEventSubscriptionsEventSubscriptionId"]
+    _event_subscriptions__EventSubscriptionId_ --> _event_subscriptions__EventSubscriptionId__delete_DeleteEventSubscriptionsEventSubscriptionId
+    _event_subscriptions__EventSubscriptionId__put_ChangeEventSubscriptionsEventSubscriptionId["PUT\nChangeEventSubscriptionsEventSubscriptionId"]
+    _event_subscriptions__EventSubscriptionId_ --> _event_subscriptions__EventSubscriptionId__put_ChangeEventSubscriptionsEventSubscriptionId
+  end

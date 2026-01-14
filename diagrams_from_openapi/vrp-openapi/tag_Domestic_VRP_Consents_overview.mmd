@@ -1,0 +1,19 @@
+flowchart TB
+  %% Tag overview: Domestic VRP Consents
+  subgraph Domestic_VRP_Consents["Domestic VRP Consents"]
+    _domestic_vrp_consents["/domestic-vrp-consents"]
+    _domestic_vrp_consents_post_domesticVrpConsentsPost["POST\ndomesticVrpConsentsPost"]
+    _domestic_vrp_consents --> _domestic_vrp_consents_post_domesticVrpConsentsPost
+    _domestic_vrp_consents__ConsentId_["/domestic-vrp-consents/{ConsentId}"]
+    _domestic_vrp_consents__ConsentId__delete_domesticVrpConsentsDelete["DELETE\ndomesticVrpConsentsDelete"]
+    _domestic_vrp_consents__ConsentId_ --> _domestic_vrp_consents__ConsentId__delete_domesticVrpConsentsDelete
+    _domestic_vrp_consents__ConsentId__get_domesticVrpConsentsGet["GET\ndomesticVrpConsentsGet"]
+    _domestic_vrp_consents__ConsentId_ --> _domestic_vrp_consents__ConsentId__get_domesticVrpConsentsGet
+    _domestic_vrp_consents__ConsentId__patch_domesticVrpConsentsPatch["PATCH\ndomesticVrpConsentsPatch"]
+    _domestic_vrp_consents__ConsentId_ --> _domestic_vrp_consents__ConsentId__patch_domesticVrpConsentsPatch
+    _domestic_vrp_consents__ConsentId__put_domesticVrpConsentsPut["PUT\ndomesticVrpConsentsPut"]
+    _domestic_vrp_consents__ConsentId_ --> _domestic_vrp_consents__ConsentId__put_domesticVrpConsentsPut
+    _domestic_vrp_consents__ConsentId__funds_confirmation["/domestic-vrp-consents/{ConsentId}/funds-confirmation"]
+    _domestic_vrp_consents__ConsentId__funds_confirmation_post_domesticVrpConsentsFundsConfirmation["POST\ndomesticVrpConsentsFundsConfirmation"]
+    _domestic_vrp_consents__ConsentId__funds_confirmation --> _domestic_vrp_consents__ConsentId__funds_confirmation_post_domesticVrpConsentsFundsConfirmation
+  end

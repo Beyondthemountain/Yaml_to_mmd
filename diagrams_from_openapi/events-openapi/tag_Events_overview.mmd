@@ -1,0 +1,7 @@
+flowchart TB
+  %% Tag overview: Events
+  subgraph Events["Events"]
+    _events["/events"]
+    _events_post_CreateEvents["POST\nCreateEvents"]
+    _events --> _events_post_CreateEvents
+  end

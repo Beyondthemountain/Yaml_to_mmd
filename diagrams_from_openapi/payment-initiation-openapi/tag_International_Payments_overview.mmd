@@ -1,0 +1,19 @@
+flowchart TB
+  %% Tag overview: International Payments
+  subgraph International_Payments["International Payments"]
+    _international_payment_consents["/international-payment-consents"]
+    _international_payment_consents_post_CreateInternationalPaymentConsents["POST\nCreateInternationalPaymentConsents"]
+    _international_payment_consents --> _international_payment_consents_post_CreateInternationalPaymentConsents
+    _international_payment_consents__ConsentId_["/international-payment-consents/{ConsentId}"]
+    _international_payment_consents__ConsentId__get_GetInternationalPaymentConsentsConsentId["GET\nGetInternationalPaymentConsentsConsentId"]
+    _international_payment_consents__ConsentId_ --> _international_payment_consents__ConsentId__get_GetInternationalPaymentConsentsConsentId
+    _international_payment_consents__ConsentId__funds_confirmation["/international-payment-consents/{ConsentId}/funds-confirmation"]
+    _international_payment_consents__ConsentId__funds_confirmation_get_GetInternationalPaymentConsentsConsentIdFundsConfirmation["GET\nGetInternationalPaymentConsentsConsentIdFundsConfirmation"]
+    _international_payment_consents__ConsentId__funds_confirmation --> _international_payment_consents__ConsentId__funds_confirmation_get_GetInternationalPaymentConsentsConsentIdFundsConfirmation
+    _international_payments["/international-payments"]
+    _international_payments_post_CreateInternationalPayments["POST\nCreateInternationalPayments"]
+    _international_payments --> _international_payments_post_CreateInternationalPayments
+    _international_payments__InternationalPaymentId_["/international-payments/{InternationalPaymentId}"]
+    _international_payments__InternationalPaymentId__get_GetInternationalPaymentsInternationalPaymentId["GET\nGetInternationalPaymentsInternationalPaymentId"]
+    _international_payments__InternationalPaymentId_ --> _international_payments__InternationalPaymentId__get_GetInternationalPaymentsInternationalPaymentId
+  end

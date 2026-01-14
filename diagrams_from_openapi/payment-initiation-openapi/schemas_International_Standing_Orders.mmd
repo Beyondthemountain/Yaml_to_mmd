@@ -1,0 +1,147 @@
+classDiagram
+  %% Schemas related to tag: International Standing Orders
+  class ActiveOrHistoricCurrencyCode
+  class BuildingName
+  class BuildingNumber
+  class CareOf
+  class CountryCode
+  class CountrySubDivision
+  class Department
+  class DistrictName
+  class ExternalCategoryPurpose1Code
+  class ExternalCreditorReferenceType1Code
+  class ExternalDocumentType1Code
+  class ExternalProxyAccountType1Code
+  class ExternalPurpose1Code
+  class Floor
+  class Frequency_1
+  class ISODateTime
+  class Identification_0
+  class Identification_1
+  class Identification_3
+  class Identification_4
+  class LEI
+  class Name
+  class NumberOfPayments
+  class OBActiveCurrencyAndAmount_SimpleType
+  class OBActiveOrHistoricCurrencyAndAmount
+  class OBAddressType2Code
+  class OBExternalMandateClassification1Code
+  class OBFrequency6
+  class OBFrequency6Code
+  class OBInternalAccountIdentification4Code
+  class OBInternalChargeBearerType1Code
+  class OBInternalExtendedAccountType1Code
+  class OBInternalFinancialInstitutionIdentification4Code
+  class OBMandateRelatedInformation1
+  class OBPostalAddress7
+  class OBProxy1
+  class OBReferredDocumentInformation
+  class OBRegulatoryAuthority2
+  class OBRegulatoryReporting1
+  class OBRemittanceInformation2
+  class OBRemittanceInformationStructured
+  class OBRisk1
+  class OBSCASupportData1
+  class OBStructuredRegulatoryReporting3
+  class OBSupplementaryData1
+  class OBUltimateCreditor1
+  class OBUltimateDebtor1
+  class OBWriteInternationalStandingOrder4
+  class OBWriteInternationalStandingOrderConsent6
+  class PointInTime
+  class PostBox
+  class PostCode
+  class Room
+  class SecondaryIdentification
+  class StreetName
+  class SubDepartment
+  class TownName
+  class UnitNumber
+  OBActiveOrHistoricCurrencyAndAmount --> ActiveOrHistoricCurrencyCode
+  OBActiveOrHistoricCurrencyAndAmount --> OBActiveCurrencyAndAmount_SimpleType
+  OBFrequency6 --> Frequency_1
+  OBFrequency6 --> OBFrequency6Code
+  OBFrequency6 --> PointInTime
+  OBMandateRelatedInformation1 --> ExternalCategoryPurpose1Code
+  OBMandateRelatedInformation1 --> Identification_1
+  OBMandateRelatedInformation1 --> OBExternalMandateClassification1Code
+  OBMandateRelatedInformation1 --> OBFrequency6
+  OBPostalAddress7 --> BuildingName
+  OBPostalAddress7 --> BuildingNumber
+  OBPostalAddress7 --> CareOf
+  OBPostalAddress7 --> CountryCode
+  OBPostalAddress7 --> CountrySubDivision
+  OBPostalAddress7 --> Department
+  OBPostalAddress7 --> DistrictName
+  OBPostalAddress7 --> Floor
+  OBPostalAddress7 --> OBAddressType2Code
+  OBPostalAddress7 --> PostBox
+  OBPostalAddress7 --> PostCode
+  OBPostalAddress7 --> Room
+  OBPostalAddress7 --> StreetName
+  OBPostalAddress7 --> SubDepartment
+  OBPostalAddress7 --> TownName
+  OBPostalAddress7 --> UnitNumber
+  OBProxy1 --> ExternalProxyAccountType1Code
+  OBReferredDocumentInformation --> ExternalDocumentType1Code
+  OBRegulatoryAuthority2 --> CountryCode
+  OBRegulatoryReporting1 --> OBRegulatoryAuthority2
+  OBRegulatoryReporting1 --> OBStructuredRegulatoryReporting3
+  OBRemittanceInformation2 --> OBRemittanceInformationStructured
+  OBRemittanceInformationStructured --> ExternalCreditorReferenceType1Code
+  OBRemittanceInformationStructured --> Identification_3
+  OBRemittanceInformationStructured --> Identification_4
+  OBRemittanceInformationStructured --> OBReferredDocumentInformation
+  OBRisk1 --> ExternalCategoryPurpose1Code
+  OBRisk1 --> ExternalPurpose1Code
+  OBRisk1 --> OBInternalExtendedAccountType1Code
+  OBRisk1 --> OBPostalAddress7
+  OBStructuredRegulatoryReporting3 --> CountryCode
+  OBStructuredRegulatoryReporting3 --> ISODateTime
+  OBStructuredRegulatoryReporting3 --> OBActiveOrHistoricCurrencyAndAmount
+  OBUltimateCreditor1 --> LEI
+  OBUltimateCreditor1 --> OBInternalAccountIdentification4Code
+  OBUltimateCreditor1 --> OBPostalAddress7
+  OBUltimateDebtor1 --> LEI
+  OBUltimateDebtor1 --> OBInternalAccountIdentification4Code
+  OBUltimateDebtor1 --> OBPostalAddress7
+  OBWriteInternationalStandingOrder4 --> ActiveOrHistoricCurrencyCode
+  OBWriteInternationalStandingOrder4 --> Identification_0
+  OBWriteInternationalStandingOrder4 --> LEI
+  OBWriteInternationalStandingOrder4 --> Name
+  OBWriteInternationalStandingOrder4 --> NumberOfPayments
+  OBWriteInternationalStandingOrder4 --> OBActiveCurrencyAndAmount_SimpleType
+  OBWriteInternationalStandingOrder4 --> OBInternalAccountIdentification4Code
+  OBWriteInternationalStandingOrder4 --> OBInternalChargeBearerType1Code
+  OBWriteInternationalStandingOrder4 --> OBInternalFinancialInstitutionIdentification4Code
+  OBWriteInternationalStandingOrder4 --> OBMandateRelatedInformation1
+  OBWriteInternationalStandingOrder4 --> OBPostalAddress7
+  OBWriteInternationalStandingOrder4 --> OBProxy1
+  OBWriteInternationalStandingOrder4 --> OBRegulatoryReporting1
+  OBWriteInternationalStandingOrder4 --> OBRemittanceInformation2
+  OBWriteInternationalStandingOrder4 --> OBRisk1
+  OBWriteInternationalStandingOrder4 --> OBSupplementaryData1
+  OBWriteInternationalStandingOrder4 --> OBUltimateCreditor1
+  OBWriteInternationalStandingOrder4 --> OBUltimateDebtor1
+  OBWriteInternationalStandingOrder4 --> SecondaryIdentification
+  OBWriteInternationalStandingOrderConsent6 --> ActiveOrHistoricCurrencyCode
+  OBWriteInternationalStandingOrderConsent6 --> Identification_0
+  OBWriteInternationalStandingOrderConsent6 --> LEI
+  OBWriteInternationalStandingOrderConsent6 --> Name
+  OBWriteInternationalStandingOrderConsent6 --> NumberOfPayments
+  OBWriteInternationalStandingOrderConsent6 --> OBActiveCurrencyAndAmount_SimpleType
+  OBWriteInternationalStandingOrderConsent6 --> OBInternalAccountIdentification4Code
+  OBWriteInternationalStandingOrderConsent6 --> OBInternalChargeBearerType1Code
+  OBWriteInternationalStandingOrderConsent6 --> OBInternalFinancialInstitutionIdentification4Code
+  OBWriteInternationalStandingOrderConsent6 --> OBMandateRelatedInformation1
+  OBWriteInternationalStandingOrderConsent6 --> OBPostalAddress7
+  OBWriteInternationalStandingOrderConsent6 --> OBProxy1
+  OBWriteInternationalStandingOrderConsent6 --> OBRegulatoryReporting1
+  OBWriteInternationalStandingOrderConsent6 --> OBRemittanceInformation2
+  OBWriteInternationalStandingOrderConsent6 --> OBRisk1
+  OBWriteInternationalStandingOrderConsent6 --> OBSCASupportData1
+  OBWriteInternationalStandingOrderConsent6 --> OBSupplementaryData1
+  OBWriteInternationalStandingOrderConsent6 --> OBUltimateCreditor1
+  OBWriteInternationalStandingOrderConsent6 --> OBUltimateDebtor1
+  OBWriteInternationalStandingOrderConsent6 --> SecondaryIdentification

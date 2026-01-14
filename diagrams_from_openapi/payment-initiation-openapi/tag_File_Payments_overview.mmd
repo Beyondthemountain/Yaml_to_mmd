@@ -1,0 +1,24 @@
+flowchart TB
+  %% Tag overview: File Payments
+  subgraph File_Payments["File Payments"]
+    _file_payment_consents["/file-payment-consents"]
+    _file_payment_consents_post_CreateFilePaymentConsents["POST\nCreateFilePaymentConsents"]
+    _file_payment_consents --> _file_payment_consents_post_CreateFilePaymentConsents
+    _file_payment_consents__ConsentId_["/file-payment-consents/{ConsentId}"]
+    _file_payment_consents__ConsentId__get_GetFilePaymentConsentsConsentId["GET\nGetFilePaymentConsentsConsentId"]
+    _file_payment_consents__ConsentId_ --> _file_payment_consents__ConsentId__get_GetFilePaymentConsentsConsentId
+    _file_payment_consents__ConsentId__file["/file-payment-consents/{ConsentId}/file"]
+    _file_payment_consents__ConsentId__file_get_GetFilePaymentConsentsConsentIdFile["GET\nGetFilePaymentConsentsConsentIdFile"]
+    _file_payment_consents__ConsentId__file --> _file_payment_consents__ConsentId__file_get_GetFilePaymentConsentsConsentIdFile
+    _file_payment_consents__ConsentId__file_post_CreateFilePaymentConsentsConsentIdFile["POST\nCreateFilePaymentConsentsConsentIdFile"]
+    _file_payment_consents__ConsentId__file --> _file_payment_consents__ConsentId__file_post_CreateFilePaymentConsentsConsentIdFile
+    _file_payments["/file-payments"]
+    _file_payments_post_CreateFilePayments["POST\nCreateFilePayments"]
+    _file_payments --> _file_payments_post_CreateFilePayments
+    _file_payments__FilePaymentId_["/file-payments/{FilePaymentId}"]
+    _file_payments__FilePaymentId__get_GetFilePaymentsFilePaymentId["GET\nGetFilePaymentsFilePaymentId"]
+    _file_payments__FilePaymentId_ --> _file_payments__FilePaymentId__get_GetFilePaymentsFilePaymentId
+    _file_payments__FilePaymentId__report_file["/file-payments/{FilePaymentId}/report-file"]
+    _file_payments__FilePaymentId__report_file_get_GetFilePaymentsFilePaymentIdReportFile["GET\nGetFilePaymentsFilePaymentIdReportFile"]
+    _file_payments__FilePaymentId__report_file --> _file_payments__FilePaymentId__report_file_get_GetFilePaymentsFilePaymentIdReportFile
+  end

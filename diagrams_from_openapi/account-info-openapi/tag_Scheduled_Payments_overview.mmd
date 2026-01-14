@@ -1,0 +1,10 @@
+flowchart TB
+  %% Tag overview: Scheduled Payments
+  subgraph Scheduled_Payments["Scheduled Payments"]
+    _accounts__AccountId__scheduled_payments["/accounts/{AccountId}/scheduled-payments"]
+    _accounts__AccountId__scheduled_payments_get_GetAccountsAccountIdScheduledPayments["GET\nGetAccountsAccountIdScheduledPayments"]
+    _accounts__AccountId__scheduled_payments --> _accounts__AccountId__scheduled_payments_get_GetAccountsAccountIdScheduledPayments
+    _scheduled_payments["/scheduled-payments"]
+    _scheduled_payments_get_GetScheduledPayments["GET\nGetScheduledPayments"]
+    _scheduled_payments --> _scheduled_payments_get_GetScheduledPayments
+  end

@@ -1,0 +1,19 @@
+flowchart TB
+  %% Tag overview: Domestic Payments
+  subgraph Domestic_Payments["Domestic Payments"]
+    _domestic_payment_consents["/domestic-payment-consents"]
+    _domestic_payment_consents_post_CreateDomesticPaymentConsents["POST\nCreateDomesticPaymentConsents"]
+    _domestic_payment_consents --> _domestic_payment_consents_post_CreateDomesticPaymentConsents
+    _domestic_payment_consents__ConsentId_["/domestic-payment-consents/{ConsentId}"]
+    _domestic_payment_consents__ConsentId__get_GetDomesticPaymentConsentsConsentId["GET\nGetDomesticPaymentConsentsConsentId"]
+    _domestic_payment_consents__ConsentId_ --> _domestic_payment_consents__ConsentId__get_GetDomesticPaymentConsentsConsentId
+    _domestic_payment_consents__ConsentId__funds_confirmation["/domestic-payment-consents/{ConsentId}/funds-confirmation"]
+    _domestic_payment_consents__ConsentId__funds_confirmation_get_GetDomesticPaymentConsentsConsentIdFundsConfirmation["GET\nGetDomesticPaymentConsentsConsentIdFundsConfirmation"]
+    _domestic_payment_consents__ConsentId__funds_confirmation --> _domestic_payment_consents__ConsentId__funds_confirmation_get_GetDomesticPaymentConsentsConsentIdFundsConfirmation
+    _domestic_payments["/domestic-payments"]
+    _domestic_payments_post_CreateDomesticPayments["POST\nCreateDomesticPayments"]
+    _domestic_payments --> _domestic_payments_post_CreateDomesticPayments
+    _domestic_payments__DomesticPaymentId_["/domestic-payments/{DomesticPaymentId}"]
+    _domestic_payments__DomesticPaymentId__get_GetDomesticPaymentsDomesticPaymentId["GET\nGetDomesticPaymentsDomesticPaymentId"]
+    _domestic_payments__DomesticPaymentId_ --> _domestic_payments__DomesticPaymentId__get_GetDomesticPaymentsDomesticPaymentId
+  end

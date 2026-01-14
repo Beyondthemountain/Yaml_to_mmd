@@ -1,0 +1,16 @@
+flowchart TB
+  %% Tag overview: Statements
+  subgraph Statements["Statements"]
+    _accounts__AccountId__statements["/accounts/{AccountId}/statements"]
+    _accounts__AccountId__statements_get_GetAccountsAccountIdStatements["GET\nGetAccountsAccountIdStatements"]
+    _accounts__AccountId__statements --> _accounts__AccountId__statements_get_GetAccountsAccountIdStatements
+    _accounts__AccountId__statements__StatementId_["/accounts/{AccountId}/statements/{StatementId}"]
+    _accounts__AccountId__statements__StatementId__get_GetAccountsAccountIdStatementsStatementId["GET\nGetAccountsAccountIdStatementsStatementId"]
+    _accounts__AccountId__statements__StatementId_ --> _accounts__AccountId__statements__StatementId__get_GetAccountsAccountIdStatementsStatementId
+    _accounts__AccountId__statements__StatementId__file["/accounts/{AccountId}/statements/{StatementId}/file"]
+    _accounts__AccountId__statements__StatementId__file_get_GetAccountsAccountIdStatementsStatementIdFile["GET\nGetAccountsAccountIdStatementsStatementIdFile"]
+    _accounts__AccountId__statements__StatementId__file --> _accounts__AccountId__statements__StatementId__file_get_GetAccountsAccountIdStatementsStatementIdFile
+    _statements["/statements"]
+    _statements_get_GetStatements["GET\nGetStatements"]
+    _statements --> _statements_get_GetStatements
+  end

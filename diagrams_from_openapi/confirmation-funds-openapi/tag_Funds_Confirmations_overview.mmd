@@ -1,0 +1,15 @@
+flowchart TB
+  %% Tag overview: Funds Confirmations
+  subgraph Funds_Confirmations["Funds Confirmations"]
+    _funds_confirmation_consents["/funds-confirmation-consents"]
+    _funds_confirmation_consents_post_CreateFundsConfirmationConsents["POST\nCreateFundsConfirmationConsents"]
+    _funds_confirmation_consents --> _funds_confirmation_consents_post_CreateFundsConfirmationConsents
+    _funds_confirmation_consents__ConsentId_["/funds-confirmation-consents/{ConsentId}"]
+    _funds_confirmation_consents__ConsentId__delete_DeleteFundsConfirmationConsentsConsentId["DELETE\nDeleteFundsConfirmationConsentsConsentId"]
+    _funds_confirmation_consents__ConsentId_ --> _funds_confirmation_consents__ConsentId__delete_DeleteFundsConfirmationConsentsConsentId
+    _funds_confirmation_consents__ConsentId__get_GetFundsConfirmationConsentsConsentId["GET\nGetFundsConfirmationConsentsConsentId"]
+    _funds_confirmation_consents__ConsentId_ --> _funds_confirmation_consents__ConsentId__get_GetFundsConfirmationConsentsConsentId
+    _funds_confirmations["/funds-confirmations"]
+    _funds_confirmations_post_CreateFundsConfirmations["POST\nCreateFundsConfirmations"]
+    _funds_confirmations --> _funds_confirmations_post_CreateFundsConfirmations
+  end

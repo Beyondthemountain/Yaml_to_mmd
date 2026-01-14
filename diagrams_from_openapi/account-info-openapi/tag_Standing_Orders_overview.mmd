@@ -1,0 +1,10 @@
+flowchart TB
+  %% Tag overview: Standing Orders
+  subgraph Standing_Orders["Standing Orders"]
+    _accounts__AccountId__standing_orders["/accounts/{AccountId}/standing-orders"]
+    _accounts__AccountId__standing_orders_get_GetAccountsAccountIdStandingOrders["GET\nGetAccountsAccountIdStandingOrders"]
+    _accounts__AccountId__standing_orders --> _accounts__AccountId__standing_orders_get_GetAccountsAccountIdStandingOrders
+    _standing_orders["/standing-orders"]
+    _standing_orders_get_GetStandingOrders["GET\nGetStandingOrders"]
+    _standing_orders --> _standing_orders_get_GetStandingOrders
+  end

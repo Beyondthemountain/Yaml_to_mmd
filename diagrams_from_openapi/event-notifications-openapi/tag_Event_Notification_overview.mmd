@@ -1,0 +1,7 @@
+flowchart TB
+  %% Tag overview: Event Notification
+  subgraph Event_Notification["Event Notification"]
+    _event_notifications["/event-notifications"]
+    _event_notifications_post_CreateEventNotification["POST\nCreateEventNotification"]
+    _event_notifications --> _event_notifications_post_CreateEventNotification
+  end

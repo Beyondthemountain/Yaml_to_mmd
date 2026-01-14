@@ -1,0 +1,13 @@
+flowchart TB
+  %% Tag overview: Parties
+  subgraph Parties["Parties"]
+    _accounts__AccountId__parties["/accounts/{AccountId}/parties"]
+    _accounts__AccountId__parties_get_GetAccountsAccountIdParties["GET\nGetAccountsAccountIdParties"]
+    _accounts__AccountId__parties --> _accounts__AccountId__parties_get_GetAccountsAccountIdParties
+    _accounts__AccountId__party["/accounts/{AccountId}/party"]
+    _accounts__AccountId__party_get_GetAccountsAccountIdParty["GET\nGetAccountsAccountIdParty"]
+    _accounts__AccountId__party --> _accounts__AccountId__party_get_GetAccountsAccountIdParty
+    _party["/party"]
+    _party_get_GetParty["GET\nGetParty"]
+    _party --> _party_get_GetParty
+  end

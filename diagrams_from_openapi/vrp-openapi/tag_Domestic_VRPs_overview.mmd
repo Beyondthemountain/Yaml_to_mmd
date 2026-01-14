@@ -1,0 +1,13 @@
+flowchart TB
+  %% Tag overview: Domestic VRPs
+  subgraph Domestic_VRPs["Domestic VRPs"]
+    _domestic_vrps["/domestic-vrps"]
+    _domestic_vrps_post_domesticVrpPost["POST\ndomesticVrpPost"]
+    _domestic_vrps --> _domestic_vrps_post_domesticVrpPost
+    _domestic_vrps__DomesticVRPId_["/domestic-vrps/{DomesticVRPId}"]
+    _domestic_vrps__DomesticVRPId__get_domesticVrpGet["GET\ndomesticVrpGet"]
+    _domestic_vrps__DomesticVRPId_ --> _domestic_vrps__DomesticVRPId__get_domesticVrpGet
+    _domestic_vrps__DomesticVRPId__payment_details["/domestic-vrps/{DomesticVRPId}/payment-details"]
+    _domestic_vrps__DomesticVRPId__payment_details_get_domesticVrpPaymentDetailsGet["GET\ndomesticVrpPaymentDetailsGet"]
+    _domestic_vrps__DomesticVRPId__payment_details --> _domestic_vrps__DomesticVRPId__payment_details_get_domesticVrpPaymentDetailsGet
+  end

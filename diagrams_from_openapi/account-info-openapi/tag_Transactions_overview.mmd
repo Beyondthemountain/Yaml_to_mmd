@@ -1,0 +1,13 @@
+flowchart TB
+  %% Tag overview: Transactions
+  subgraph Transactions["Transactions"]
+    _accounts__AccountId__statements__StatementId__transactions["/accounts/{AccountId}/statements/{StatementId}/transactions"]
+    _accounts__AccountId__statements__StatementId__transactions_get_GetAccountsAccountIdStatementsStatementIdTransactions["GET\nGetAccountsAccountIdStatementsStatementIdTransactions"]
+    _accounts__AccountId__statements__StatementId__transactions --> _accounts__AccountId__statements__StatementId__transactions_get_GetAccountsAccountIdStatementsStatementIdTransactions
+    _accounts__AccountId__transactions["/accounts/{AccountId}/transactions"]
+    _accounts__AccountId__transactions_get_GetAccountsAccountIdTransactions["GET\nGetAccountsAccountIdTransactions"]
+    _accounts__AccountId__transactions --> _accounts__AccountId__transactions_get_GetAccountsAccountIdTransactions
+    _transactions["/transactions"]
+    _transactions_get_GetTransactions["GET\nGetTransactions"]
+    _transactions --> _transactions_get_GetTransactions
+  end

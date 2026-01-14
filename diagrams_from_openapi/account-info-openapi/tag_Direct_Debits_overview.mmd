@@ -1,0 +1,10 @@
+flowchart TB
+  %% Tag overview: Direct Debits
+  subgraph Direct_Debits["Direct Debits"]
+    _accounts__AccountId__direct_debits["/accounts/{AccountId}/direct-debits"]
+    _accounts__AccountId__direct_debits_get_GetAccountsAccountIdDirectDebits["GET\nGetAccountsAccountIdDirectDebits"]
+    _accounts__AccountId__direct_debits --> _accounts__AccountId__direct_debits_get_GetAccountsAccountIdDirectDebits
+    _direct_debits["/direct-debits"]
+    _direct_debits_get_GetDirectDebits["GET\nGetDirectDebits"]
+    _direct_debits --> _direct_debits_get_GetDirectDebits
+  end

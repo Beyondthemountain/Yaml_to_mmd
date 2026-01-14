@@ -1,0 +1,95 @@
+classDiagram
+  %% Schemas related to tag: File Payments
+  class BuildingName
+  class BuildingNumber
+  class CareOf
+  class CountryCode
+  class CountrySubDivision
+  class Department
+  class DistrictName
+  class ExternalCreditorReferenceType1Code
+  class ExternalDocumentType1Code
+  class ExternalProxyAccountType1Code
+  class File
+  class Floor
+  class Identification_0
+  class Identification_1
+  class Identification_3
+  class Identification_4
+  class LEI
+  class Name
+  class OBAddressType2Code
+  class OBInternalAccountIdentification4Code
+  class OBInternalFinancialInstitutionIdentification4Code
+  class OBInternalLocalInstrument1Code
+  class OBPostalAddress7
+  class OBProxy1
+  class OBReferredDocumentInformation
+  class OBRemittanceInformation2
+  class OBRemittanceInformationStructured
+  class OBSCASupportData1
+  class OBSupplementaryData1
+  class OBUltimateDebtor1
+  class OBWriteFile2
+  class OBWriteFileConsent3
+  class PostBox
+  class PostCode
+  class Room
+  class SecondaryIdentification
+  class StreetName
+  class SubDepartment
+  class TownName
+  class UnitNumber
+  OBPostalAddress7 --> BuildingName
+  OBPostalAddress7 --> BuildingNumber
+  OBPostalAddress7 --> CareOf
+  OBPostalAddress7 --> CountryCode
+  OBPostalAddress7 --> CountrySubDivision
+  OBPostalAddress7 --> Department
+  OBPostalAddress7 --> DistrictName
+  OBPostalAddress7 --> Floor
+  OBPostalAddress7 --> OBAddressType2Code
+  OBPostalAddress7 --> PostBox
+  OBPostalAddress7 --> PostCode
+  OBPostalAddress7 --> Room
+  OBPostalAddress7 --> StreetName
+  OBPostalAddress7 --> SubDepartment
+  OBPostalAddress7 --> TownName
+  OBPostalAddress7 --> UnitNumber
+  OBProxy1 --> ExternalProxyAccountType1Code
+  OBReferredDocumentInformation --> ExternalDocumentType1Code
+  OBRemittanceInformation2 --> OBRemittanceInformationStructured
+  OBRemittanceInformationStructured --> ExternalCreditorReferenceType1Code
+  OBRemittanceInformationStructured --> Identification_3
+  OBRemittanceInformationStructured --> Identification_4
+  OBRemittanceInformationStructured --> OBReferredDocumentInformation
+  OBUltimateDebtor1 --> LEI
+  OBUltimateDebtor1 --> OBInternalAccountIdentification4Code
+  OBUltimateDebtor1 --> OBPostalAddress7
+  OBWriteFile2 --> Identification_0
+  OBWriteFile2 --> Identification_1
+  OBWriteFile2 --> LEI
+  OBWriteFile2 --> Name
+  OBWriteFile2 --> OBInternalAccountIdentification4Code
+  OBWriteFile2 --> OBInternalFinancialInstitutionIdentification4Code
+  OBWriteFile2 --> OBInternalLocalInstrument1Code
+  OBWriteFile2 --> OBPostalAddress7
+  OBWriteFile2 --> OBProxy1
+  OBWriteFile2 --> OBRemittanceInformation2
+  OBWriteFile2 --> OBSupplementaryData1
+  OBWriteFile2 --> OBUltimateDebtor1
+  OBWriteFile2 --> SecondaryIdentification
+  OBWriteFileConsent3 --> Identification_0
+  OBWriteFileConsent3 --> Identification_1
+  OBWriteFileConsent3 --> LEI
+  OBWriteFileConsent3 --> Name
+  OBWriteFileConsent3 --> OBInternalAccountIdentification4Code
+  OBWriteFileConsent3 --> OBInternalFinancialInstitutionIdentification4Code
+  OBWriteFileConsent3 --> OBInternalLocalInstrument1Code
+  OBWriteFileConsent3 --> OBPostalAddress7
+  OBWriteFileConsent3 --> OBProxy1
+  OBWriteFileConsent3 --> OBRemittanceInformation2
+  OBWriteFileConsent3 --> OBSCASupportData1
+  OBWriteFileConsent3 --> OBSupplementaryData1
+  OBWriteFileConsent3 --> OBUltimateDebtor1
+  OBWriteFileConsent3 --> SecondaryIdentification

@@ -1,0 +1,10 @@
+flowchart TB
+  %% Tag overview: Beneficiaries
+  subgraph Beneficiaries["Beneficiaries"]
+    _accounts__AccountId__beneficiaries["/accounts/{AccountId}/beneficiaries"]
+    _accounts__AccountId__beneficiaries_get_GetAccountsAccountIdBeneficiaries["GET\nGetAccountsAccountIdBeneficiaries"]
+    _accounts__AccountId__beneficiaries --> _accounts__AccountId__beneficiaries_get_GetAccountsAccountIdBeneficiaries
+    _beneficiaries["/beneficiaries"]
+    _beneficiaries_get_GetBeneficiaries["GET\nGetBeneficiaries"]
+    _beneficiaries --> _beneficiaries_get_GetBeneficiaries
+  end

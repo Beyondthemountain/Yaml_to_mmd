@@ -1,0 +1,134 @@
+classDiagram
+  %% Schemas related to tag: International Scheduled Payments
+  class ActiveOrHistoricCurrencyCode
+  class BuildingName
+  class BuildingNumber
+  class CareOf
+  class CountryCode
+  class CountrySubDivision
+  class Department
+  class DistrictName
+  class ExternalCategoryPurpose1Code
+  class ExternalCreditorReferenceType1Code
+  class ExternalDocumentType1Code
+  class ExternalProxyAccountType1Code
+  class ExternalPurpose1Code
+  class Floor
+  class ISODateTime
+  class Identification_0
+  class Identification_1
+  class Identification_3
+  class Identification_4
+  class LEI
+  class Name
+  class OBActiveCurrencyAndAmount_SimpleType
+  class OBActiveOrHistoricCurrencyAndAmount
+  class OBAddressType2Code
+  class OBInternalAccountIdentification4Code
+  class OBInternalChargeBearerType1Code
+  class OBInternalExtendedAccountType1Code
+  class OBInternalFinancialInstitutionIdentification4Code
+  class OBInternalLocalInstrument1Code
+  class OBPostalAddress7
+  class OBProxy1
+  class OBReferredDocumentInformation
+  class OBRegulatoryAuthority2
+  class OBRegulatoryReporting1
+  class OBRemittanceInformation2
+  class OBRemittanceInformationStructured
+  class OBRisk1
+  class OBSCASupportData1
+  class OBStructuredRegulatoryReporting3
+  class OBSupplementaryData1
+  class OBUltimateCreditor1
+  class OBUltimateDebtor1
+  class OBWriteInternationalScheduled3
+  class OBWriteInternationalScheduledConsent5
+  class PostBox
+  class PostCode
+  class Room
+  class SecondaryIdentification
+  class StreetName
+  class SubDepartment
+  class TownName
+  class UnitNumber
+  OBActiveOrHistoricCurrencyAndAmount --> ActiveOrHistoricCurrencyCode
+  OBActiveOrHistoricCurrencyAndAmount --> OBActiveCurrencyAndAmount_SimpleType
+  OBPostalAddress7 --> BuildingName
+  OBPostalAddress7 --> BuildingNumber
+  OBPostalAddress7 --> CareOf
+  OBPostalAddress7 --> CountryCode
+  OBPostalAddress7 --> CountrySubDivision
+  OBPostalAddress7 --> Department
+  OBPostalAddress7 --> DistrictName
+  OBPostalAddress7 --> Floor
+  OBPostalAddress7 --> OBAddressType2Code
+  OBPostalAddress7 --> PostBox
+  OBPostalAddress7 --> PostCode
+  OBPostalAddress7 --> Room
+  OBPostalAddress7 --> StreetName
+  OBPostalAddress7 --> SubDepartment
+  OBPostalAddress7 --> TownName
+  OBPostalAddress7 --> UnitNumber
+  OBProxy1 --> ExternalProxyAccountType1Code
+  OBReferredDocumentInformation --> ExternalDocumentType1Code
+  OBRegulatoryAuthority2 --> CountryCode
+  OBRegulatoryReporting1 --> OBRegulatoryAuthority2
+  OBRegulatoryReporting1 --> OBStructuredRegulatoryReporting3
+  OBRemittanceInformation2 --> OBRemittanceInformationStructured
+  OBRemittanceInformationStructured --> ExternalCreditorReferenceType1Code
+  OBRemittanceInformationStructured --> Identification_3
+  OBRemittanceInformationStructured --> Identification_4
+  OBRemittanceInformationStructured --> OBReferredDocumentInformation
+  OBRisk1 --> ExternalCategoryPurpose1Code
+  OBRisk1 --> ExternalPurpose1Code
+  OBRisk1 --> OBInternalExtendedAccountType1Code
+  OBRisk1 --> OBPostalAddress7
+  OBStructuredRegulatoryReporting3 --> CountryCode
+  OBStructuredRegulatoryReporting3 --> ISODateTime
+  OBStructuredRegulatoryReporting3 --> OBActiveOrHistoricCurrencyAndAmount
+  OBUltimateCreditor1 --> LEI
+  OBUltimateCreditor1 --> OBInternalAccountIdentification4Code
+  OBUltimateCreditor1 --> OBPostalAddress7
+  OBUltimateDebtor1 --> LEI
+  OBUltimateDebtor1 --> OBInternalAccountIdentification4Code
+  OBUltimateDebtor1 --> OBPostalAddress7
+  OBWriteInternationalScheduled3 --> ActiveOrHistoricCurrencyCode
+  OBWriteInternationalScheduled3 --> Identification_0
+  OBWriteInternationalScheduled3 --> Identification_1
+  OBWriteInternationalScheduled3 --> LEI
+  OBWriteInternationalScheduled3 --> Name
+  OBWriteInternationalScheduled3 --> OBActiveCurrencyAndAmount_SimpleType
+  OBWriteInternationalScheduled3 --> OBInternalAccountIdentification4Code
+  OBWriteInternationalScheduled3 --> OBInternalChargeBearerType1Code
+  OBWriteInternationalScheduled3 --> OBInternalFinancialInstitutionIdentification4Code
+  OBWriteInternationalScheduled3 --> OBInternalLocalInstrument1Code
+  OBWriteInternationalScheduled3 --> OBPostalAddress7
+  OBWriteInternationalScheduled3 --> OBProxy1
+  OBWriteInternationalScheduled3 --> OBRegulatoryReporting1
+  OBWriteInternationalScheduled3 --> OBRemittanceInformation2
+  OBWriteInternationalScheduled3 --> OBRisk1
+  OBWriteInternationalScheduled3 --> OBSupplementaryData1
+  OBWriteInternationalScheduled3 --> OBUltimateCreditor1
+  OBWriteInternationalScheduled3 --> OBUltimateDebtor1
+  OBWriteInternationalScheduled3 --> SecondaryIdentification
+  OBWriteInternationalScheduledConsent5 --> ActiveOrHistoricCurrencyCode
+  OBWriteInternationalScheduledConsent5 --> Identification_0
+  OBWriteInternationalScheduledConsent5 --> Identification_1
+  OBWriteInternationalScheduledConsent5 --> LEI
+  OBWriteInternationalScheduledConsent5 --> Name
+  OBWriteInternationalScheduledConsent5 --> OBActiveCurrencyAndAmount_SimpleType
+  OBWriteInternationalScheduledConsent5 --> OBInternalAccountIdentification4Code
+  OBWriteInternationalScheduledConsent5 --> OBInternalChargeBearerType1Code
+  OBWriteInternationalScheduledConsent5 --> OBInternalFinancialInstitutionIdentification4Code
+  OBWriteInternationalScheduledConsent5 --> OBInternalLocalInstrument1Code
+  OBWriteInternationalScheduledConsent5 --> OBPostalAddress7
+  OBWriteInternationalScheduledConsent5 --> OBProxy1
+  OBWriteInternationalScheduledConsent5 --> OBRegulatoryReporting1
+  OBWriteInternationalScheduledConsent5 --> OBRemittanceInformation2
+  OBWriteInternationalScheduledConsent5 --> OBRisk1
+  OBWriteInternationalScheduledConsent5 --> OBSCASupportData1
+  OBWriteInternationalScheduledConsent5 --> OBSupplementaryData1
+  OBWriteInternationalScheduledConsent5 --> OBUltimateCreditor1
+  OBWriteInternationalScheduledConsent5 --> OBUltimateDebtor1
+  OBWriteInternationalScheduledConsent5 --> SecondaryIdentification

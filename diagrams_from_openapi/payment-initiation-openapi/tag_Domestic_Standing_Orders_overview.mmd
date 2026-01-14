@@ -1,0 +1,16 @@
+flowchart TB
+  %% Tag overview: Domestic Standing Orders
+  subgraph Domestic_Standing_Orders["Domestic Standing Orders"]
+    _domestic_standing_order_consents["/domestic-standing-order-consents"]
+    _domestic_standing_order_consents_post_CreateDomesticStandingOrderConsents["POST\nCreateDomesticStandingOrderConsents"]
+    _domestic_standing_order_consents --> _domestic_standing_order_consents_post_CreateDomesticStandingOrderConsents
+    _domestic_standing_order_consents__ConsentId_["/domestic-standing-order-consents/{ConsentId}"]
+    _domestic_standing_order_consents__ConsentId__get_GetDomesticStandingOrderConsentsConsentId["GET\nGetDomesticStandingOrderConsentsConsentId"]
+    _domestic_standing_order_consents__ConsentId_ --> _domestic_standing_order_consents__ConsentId__get_GetDomesticStandingOrderConsentsConsentId
+    _domestic_standing_orders["/domestic-standing-orders"]
+    _domestic_standing_orders_post_CreateDomesticStandingOrders["POST\nCreateDomesticStandingOrders"]
+    _domestic_standing_orders --> _domestic_standing_orders_post_CreateDomesticStandingOrders
+    _domestic_standing_orders__DomesticStandingOrderId_["/domestic-standing-orders/{DomesticStandingOrderId}"]
+    _domestic_standing_orders__DomesticStandingOrderId__get_GetDomesticStandingOrdersDomesticStandingOrderId["GET\nGetDomesticStandingOrdersDomesticStandingOrderId"]
+    _domestic_standing_orders__DomesticStandingOrderId_ --> _domestic_standing_orders__DomesticStandingOrderId__get_GetDomesticStandingOrdersDomesticStandingOrderId
+  end

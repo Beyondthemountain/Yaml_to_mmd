@@ -1,0 +1,13 @@
+classDiagram
+  %% Schemas related to tag: Event Subscriptions
+  class ISODateTime
+  class Links
+  class Meta
+  class OBEventSubscription1
+  class OBEventSubscriptionResponse1
+  class Version
+  Meta --> ISODateTime
+  OBEventSubscription1 --> Version
+  OBEventSubscriptionResponse1 --> Links
+  OBEventSubscriptionResponse1 --> Meta
+  OBEventSubscriptionResponse1 --> Version

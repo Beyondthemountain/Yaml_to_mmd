@@ -1,0 +1,113 @@
+classDiagram
+  %% Schemas related to tag: Domestic VRPs
+  class ActiveOrHistoricCurrencyCode
+  class BuildingName
+  class BuildingNumber
+  class CareOf
+  class CountryCode
+  class CountrySubDivision
+  class Department
+  class DistrictName
+  class ExternalCategoryPurpose1Code
+  class ExternalCreditorReferenceType1Code
+  class ExternalDocumentType1Code
+  class ExternalProxyAccountType1Code
+  class Floor
+  class ISODateTime
+  class LEI
+  class OBActiveCurrencyAndAmount_SimpleType
+  class OBActiveOrHistoricCurrencyAndAmount
+  class OBAddressType2Code
+  class OBCashAccountCreditor3
+  class OBCashAccountDebtorWithName
+  class OBDomesticVRPInitiation
+  class OBDomesticVRPInstruction
+  class OBDomesticVRPRequest
+  class OBExternalPurpose1Code
+  class OBInternalAccountIdentification4Code
+  class OBInternalExtendedAccountType1Code
+  class OBInternalLocalInstrument1Code
+  class OBPostalAddress7
+  class OBProxy1
+  class OBReferredDocumentInformation
+  class OBRegulatoryAuthority2
+  class OBRegulatoryReporting1
+  class OBRemittanceInformation2
+  class OBRemittanceInformationStructured
+  class OBRisk1
+  class OBStructuredRegulatoryReporting3
+  class OBUltimateCreditor1
+  class OBUltimateDebtor1
+  class OBVRPAuthenticationMethods
+  class OBVRPConsentType
+  class OBVRPInteractionTypes
+  class PostBox
+  class PostCode
+  class Room
+  class StreetName
+  class SubDepartment
+  class TownName
+  class UnitNumber
+  OBActiveOrHistoricCurrencyAndAmount --> ActiveOrHistoricCurrencyCode
+  OBActiveOrHistoricCurrencyAndAmount --> OBActiveCurrencyAndAmount_SimpleType
+  OBCashAccountCreditor3 --> OBInternalAccountIdentification4Code
+  OBCashAccountCreditor3 --> OBProxy1
+  OBCashAccountDebtorWithName --> OBInternalAccountIdentification4Code
+  OBCashAccountDebtorWithName --> OBProxy1
+  OBDomesticVRPInitiation --> OBCashAccountCreditor3
+  OBDomesticVRPInitiation --> OBCashAccountDebtorWithName
+  OBDomesticVRPInitiation --> OBPostalAddress7
+  OBDomesticVRPInitiation --> OBRegulatoryReporting1
+  OBDomesticVRPInitiation --> OBRemittanceInformation2
+  OBDomesticVRPInitiation --> OBUltimateCreditor1
+  OBDomesticVRPInitiation --> OBUltimateDebtor1
+  OBDomesticVRPInstruction --> OBActiveOrHistoricCurrencyAndAmount
+  OBDomesticVRPInstruction --> OBCashAccountCreditor3
+  OBDomesticVRPInstruction --> OBInternalLocalInstrument1Code
+  OBDomesticVRPInstruction --> OBPostalAddress7
+  OBDomesticVRPInstruction --> OBRemittanceInformation2
+  OBDomesticVRPInstruction --> OBUltimateCreditor1
+  OBDomesticVRPRequest --> OBDomesticVRPInitiation
+  OBDomesticVRPRequest --> OBDomesticVRPInstruction
+  OBDomesticVRPRequest --> OBRisk1
+  OBDomesticVRPRequest --> OBVRPAuthenticationMethods
+  OBDomesticVRPRequest --> OBVRPConsentType
+  OBDomesticVRPRequest --> OBVRPInteractionTypes
+  OBPostalAddress7 --> BuildingName
+  OBPostalAddress7 --> BuildingNumber
+  OBPostalAddress7 --> CareOf
+  OBPostalAddress7 --> CountryCode
+  OBPostalAddress7 --> CountrySubDivision
+  OBPostalAddress7 --> Department
+  OBPostalAddress7 --> DistrictName
+  OBPostalAddress7 --> Floor
+  OBPostalAddress7 --> OBAddressType2Code
+  OBPostalAddress7 --> PostBox
+  OBPostalAddress7 --> PostCode
+  OBPostalAddress7 --> Room
+  OBPostalAddress7 --> StreetName
+  OBPostalAddress7 --> SubDepartment
+  OBPostalAddress7 --> TownName
+  OBPostalAddress7 --> UnitNumber
+  OBProxy1 --> ExternalProxyAccountType1Code
+  OBReferredDocumentInformation --> ExternalDocumentType1Code
+  OBReferredDocumentInformation --> ISODateTime
+  OBRegulatoryAuthority2 --> CountryCode
+  OBRegulatoryReporting1 --> OBRegulatoryAuthority2
+  OBRegulatoryReporting1 --> OBStructuredRegulatoryReporting3
+  OBRemittanceInformation2 --> OBRemittanceInformationStructured
+  OBRemittanceInformationStructured --> ExternalCreditorReferenceType1Code
+  OBRemittanceInformationStructured --> OBReferredDocumentInformation
+  OBRisk1 --> ExternalCategoryPurpose1Code
+  OBRisk1 --> OBExternalPurpose1Code
+  OBRisk1 --> OBInternalExtendedAccountType1Code
+  OBRisk1 --> OBPostalAddress7
+  OBStructuredRegulatoryReporting3 --> CountryCode
+  OBStructuredRegulatoryReporting3 --> ISODateTime
+  OBStructuredRegulatoryReporting3 --> OBActiveOrHistoricCurrencyAndAmount
+  OBUltimateCreditor1 --> LEI
+  OBUltimateCreditor1 --> OBInternalAccountIdentification4Code
+  OBUltimateCreditor1 --> OBPostalAddress7
+  OBUltimateDebtor1 --> LEI
+  OBUltimateDebtor1 --> OBInternalAccountIdentification4Code
+  OBUltimateDebtor1 --> OBPostalAddress7

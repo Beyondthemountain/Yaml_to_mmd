@@ -1,0 +1,10 @@
+flowchart TB
+  %% Tag overview: Products
+  subgraph Products["Products"]
+    _accounts__AccountId__product["/accounts/{AccountId}/product"]
+    _accounts__AccountId__product_get_GetAccountsAccountIdProduct["GET\nGetAccountsAccountIdProduct"]
+    _accounts__AccountId__product --> _accounts__AccountId__product_get_GetAccountsAccountIdProduct
+    _products["/products"]
+    _products_get_GetProducts["GET\nGetProducts"]
+    _products --> _products_get_GetProducts
+  end

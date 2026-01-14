@@ -1,0 +1,10 @@
+flowchart TB
+  %% Tag overview: Offers
+  subgraph Offers["Offers"]
+    _accounts__AccountId__offers["/accounts/{AccountId}/offers"]
+    _accounts__AccountId__offers_get_GetAccountsAccountIdOffers["GET\nGetAccountsAccountIdOffers"]
+    _accounts__AccountId__offers --> _accounts__AccountId__offers_get_GetAccountsAccountIdOffers
+    _offers["/offers"]
+    _offers_get_GetOffers["GET\nGetOffers"]
+    _offers --> _offers_get_GetOffers
+  end

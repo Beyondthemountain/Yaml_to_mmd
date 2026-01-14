@@ -1,0 +1,16 @@
+flowchart TB
+  %% Tag overview: International Standing Orders
+  subgraph International_Standing_Orders["International Standing Orders"]
+    _international_standing_order_consents["/international-standing-order-consents"]
+    _international_standing_order_consents_post_CreateInternationalStandingOrderConsents["POST\nCreateInternationalStandingOrderConsents"]
+    _international_standing_order_consents --> _international_standing_order_consents_post_CreateInternationalStandingOrderConsents
+    _international_standing_order_consents__ConsentId_["/international-standing-order-consents/{ConsentId}"]
+    _international_standing_order_consents__ConsentId__get_GetInternationalStandingOrderConsentsConsentId["GET\nGetInternationalStandingOrderConsentsConsentId"]
+    _international_standing_order_consents__ConsentId_ --> _international_standing_order_consents__ConsentId__get_GetInternationalStandingOrderConsentsConsentId
+    _international_standing_orders["/international-standing-orders"]
+    _international_standing_orders_post_CreateInternationalStandingOrders["POST\nCreateInternationalStandingOrders"]
+    _international_standing_orders --> _international_standing_orders_post_CreateInternationalStandingOrders
+    _international_standing_orders__InternationalStandingOrderPaymentId_["/international-standing-orders/{InternationalStandingOrderPaymentId}"]
+    _international_standing_orders__InternationalStandingOrderPaymentId__get_GetInternationalStandingOrdersInternationalStandingOrderPaymentId["GET\nGetInternationalStandingOrdersInternationalStandingOrderPaymentId"]
+    _international_standing_orders__InternationalStandingOrderPaymentId_ --> _international_standing_orders__InternationalStandingOrderPaymentId__get_GetInternationalStandingOrdersInternationalStandingOrderPaymentId
+  end
